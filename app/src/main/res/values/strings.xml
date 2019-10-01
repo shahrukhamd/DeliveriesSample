@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DeliveriesSample</string>
+
+    <!--Fragment titles-->
+    <string name="fragment_delivery_list">Delivery list</string>
+    <string name="fragment_item_details">Details</string>
+
+    <!--Navigation-->
+    <string name="nav_menu_item_deliver_list">Delivery list</string>
+</resources>

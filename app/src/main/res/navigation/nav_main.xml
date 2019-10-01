@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/fragment_delivery_list">
+
+    <fragment
+        android:id="@+id/fragment_delivery_list"
+        android:name="com.sasiddiqui.deliveriessample.screen_delivery_list.ui.DeliveryItemListFragment"
+        android:label="@string/fragment_delivery_list"
+        tools:layout="@layout/fragment_delivery_list">
+
+        <action
+            android:id="@+id/action_list_fragment_to_details_fragment"
+            app:destination="@id/fragment_item_details"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_item_details"
+        android:name="com.sasiddiqui.deliveriessample.screen_delivery_list.ui.ItemDetailsFragment"
+        android:label="@string/fragment_item_details"
+        tools:layout="@layout/fragment_item_details">
+
+        <argument
+            android:name="itemLocation"
+            app:argType="com.sasiddiqui.deliveriessample.screen_delivery_list.data.model.Location"
+            app:nullable="true" />
+
+    </fragment>
+
+</navigation>

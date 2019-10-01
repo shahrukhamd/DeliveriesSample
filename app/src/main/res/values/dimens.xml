@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_normal">16dp</dimen>
+    <dimen name="delivery_item_image">80dp</dimen>
+    <dimen name="delivery_item_title">20sp</dimen>
+    <dimen name="delivery_item_description">16sp</dimen>
+</resources>
