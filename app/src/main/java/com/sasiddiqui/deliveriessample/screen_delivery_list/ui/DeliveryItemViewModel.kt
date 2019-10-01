@@ -13,7 +13,7 @@ import javax.inject.Inject
 class DeliveryItemViewModel @Inject constructor(context : Context, repository: DeliveryItemRepository,
                                                 @CoroutineScropeIO private val ioCoroutineScope: CoroutineScope
 ) : ViewModel() {
-    
+
     var connectivityAvailable: Boolean = ConnectivityUtil.isConnected(context)
 
     val deliveryItems by lazy {
