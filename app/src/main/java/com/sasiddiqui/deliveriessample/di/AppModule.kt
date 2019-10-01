@@ -1,6 +1,8 @@
 package com.sasiddiqui.deliveriessample.di
 
 import android.app.Application
+import android.content.Context
+import com.sasiddiqui.deliveriessample.App
 import com.sasiddiqui.deliveriessample.api.DeliveryService
 import com.sasiddiqui.deliveriessample.repository.data.AppDatabase
 import com.sasiddiqui.deliveriessample.repository.DeliveryItemRemoteDataSource
@@ -25,8 +27,7 @@ class AppModule {
     @Singleton
     @Provides
     fun provideDeliveryItemRemoteDataSource(deliveryService: DeliveryService)
-            =
-        DeliveryItemRemoteDataSource(deliveryService)
+            = DeliveryItemRemoteDataSource(deliveryService)
 
     @DeliveryAPI
     @Provides
@@ -63,4 +64,7 @@ class AppModule {
             converterFactory: GsonConverterFactory, clazz: Class<T>): T {
         return createRetrofit(okhttpClient, converterFactory).create(clazz)
     }
+
+    @Provides
+    fun provideContext(app: Application) : Context = app.applicationContext
 }
